@@ -1,0 +1,389 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+  background: var(--background-light);
+}
+
+.table th {
+  text-align: left;
+  padding: 20px 16px;
+  color: var(--dark-text);
+  font-weight: 400;
+  text-transform: none;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--light-gray);
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.row {
+  cursor: pointer;
+  background: var(--white);
+  transition: background-color 0.2s ease;
+}
+
+.row:hover {
+  background: var(--background-light);
+}
+
+.row.selected {
+  background: #FFF8E1;
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Columna Proyecto */
+.projectName {
+  color: var(--dark-text);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.projectCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.projectPlaceholder {
+  width: 40px;
+  height: 40px;
+  background: #D3D3D3;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.projectTitle {
+  color: var(--dark-text);
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.verifiedIcon {
+  color: var(--info-color);
+  font-size: 12px;
+}
+
+.projectMeta {
+  color: var(--medium-text);
+  font-size: 11px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.metaIcon {
+  font-size: 10px;
+}
+
+/* insignia  base */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Tipos de planes*/
+.planSmall {
+  background: #D4854F;
+  color: var(--white);
+}
+
+.planAdvanced {
+  background: #6C757D;
+  color: var(--white);
+}
+
+.planPremium {
+  background: #FFD700;
+  color: var(--white);
+}
+
+/* status insignia */
+.statusActive {
+  background: #E8F5E9;
+  color: #008000;
+}
+
+.statusSuspended {
+  background: #FFEBEE;
+  color: #F44336;
+}
+
+.statusInactive {
+  background: #F5F5F5;
+  color: var(--medium-text);
+}
+
+.statusCompleted {
+  background: #E1F5FE;
+  color: #0288D1;
+}
+
+/* avatar de equipos */
+.teamContainer {
+  display: flex;
+  align-items: center;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #FFD700;
+  clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-text);
+  font-weight: 600;
+  font-size: 11px;
+  border: 2px solid var(--white);
+  margin-left: -12px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar:hover {
+  transform: scale(1.15);
+  z-index: 10;
+  margin-left: -6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* la opacidad escalonada para los avatar de derecha a izquierda*/
+.avatar1 { opacity: 0.6; }
+.avatar2 { opacity: 0.7; }
+.avatar3 { opacity: 0.8; }
+.avatar4 { opacity: 0.9; }
+.avatar5 { opacity: 1; }
+
+/* Items por vencer*/
+.dueItemsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.dueItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #FFFBF0;
+  flex: 1;
+  min-width: 50px;
+}
+
+.dueEmoji {
+  font-size: 16px;
+  line-height: 1;
+  min-width: 16px;
+  text-align: center;
+  color: #FFC107;
+  font-weight: bold;
+}
+
+.dueContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.dueLabel {
+  font-size: 9px;
+  color: var(--medium-text);
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  line-height: 1;
+}
+
+.dueCount {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--dark-text);
+  line-height: 1;
+}
+
+.teamCount {
+  background: #6C757D;
+  color: var(--white);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  border: 2px solid var(--white);
+  margin-left: -12px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .table th,
+  .table td {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .projectPlaceholder {
+    width: 36px;
+    height: 36px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    margin-left: -10px;
+    font-size: 10px;
+  }
+
+  .avatar:hover {
+    margin-left: -5px;
+  }
+
+  .teamCount {
+    width: 32px;
+    height: 32px;
+    margin-left: -10px;
+  }
+
+  .dueItemsContainer {
+    gap: 10px;
+    min-width: 150px;
+  }
+
+  .dueItem {
+    padding: 3px 6px;
+    gap: 4px;
+  }
+
+  .dueEmoji {
+    font-size: 14px;
+  }
+
+  .dueLabel {
+    font-size: 8px;
+  }
+
+  .dueCount {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 12px;
+  }
+
+  .table th {
+    padding: 12px 8px;
+    font-size: 10px;
+  }
+
+  .table td {
+    padding: 12px 8px;
+  }
+
+  .projectName {
+    font-size: 12px;
+  }
+
+  .badge {
+    padding: 4px 8px;
+    font-size: 9px;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    margin-left: -8px;
+    font-size: 9px;
+  }
+
+  .avatar:hover {
+    margin-left: -4px;
+  }
+
+  .teamCount {
+    width: 28px;
+    height: 28px;
+    margin-left: -8px;
+    font-size: 9px;
+  }
+
+  .dueItemsContainer {
+    gap: 8px;
+    min-width: 120px;
+  }
+
+  .dueItem {
+    padding: 2px 4px;
+    gap: 3px;
+  }
+
+  .dueEmoji {
+    font-size: 12px;
+  }
+
+  .dueLabel {
+    font-size: 7px;
+  }
+
+  .dueCount {
+    font-size: 11px;
+  }
+}

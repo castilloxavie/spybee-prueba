@@ -1,0 +1,180 @@
+.main {
+  padding-top: 24px;
+  background: var(--background-light);
+  min-height: calc(100vh - 64px - 84px); /* viewport - header - subheader */
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* vista de lista*/
+.listView {
+  padding: 0;
+}
+
+.tableWrapper {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+/* ===== VISTA 2: MIXTA (Mapa + Tabla + Sidebar) ===== */
+.mixedView {
+  padding: 24px 0;
+}
+
+.mixedView .container {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mapSection {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  order: 1;
+}
+
+.mapSection > div {
+  height: 100%;
+  width: 100%;
+}
+
+.tableSection {
+  width: 100%;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  max-width: 600px; /* Compress table width for mixed view */
+}
+
+/* ===== VISTA 3: SOLO MAPA ===== */
+.mapOnlyView {
+  padding: 24px 0;
+}
+
+.mapOnlyView .container {
+  width: 100%;
+  height: 800px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mapOnlyView .container > div {
+  height: 100%;
+  width: 100%;
+}
+
+/*responsive*/
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .mixedView .container {
+    gap: 16px;
+  }
+
+  .mapSection {
+    height: 450px;
+  }
+
+  .tableSection {
+    padding: 20px;
+  }
+
+  .tableWrapper {
+    padding: 20px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .main {
+    padding-top: 16px;
+  }
+
+  .tableWrapper {
+    padding: 16px;
+  }
+
+  .tableSection {
+    padding: 16px;
+  }
+
+  .mapSection {
+    height: 350px;
+  }
+
+  .mapOnlyView .container {
+    height: 500px;
+  }
+
+  .content {
+    gap: 16px;
+  }
+
+  .mixedView .container {
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .main {
+    padding-top: 12px;
+  }
+
+  .tableWrapper {
+    padding: 12px;
+  }
+
+  .tableSection {
+    padding: 12px;
+  }
+
+  .mapSection {
+    height: 300px;
+  }
+
+  .mapOnlyView .container {
+    height: 400px;
+  }
+
+  /* Hacer scrolleable la tabla en mobile */
+  .tableWrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tableSection {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

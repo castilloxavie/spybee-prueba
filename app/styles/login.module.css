@@ -1,0 +1,150 @@
+:root {
+    --background-light:#F4F5F7;
+    --dark-text: #212529;
+    --light-gray: #DEE2E6;
+    --primary-color:#FFC107
+}
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background: var(--background-light);
+}
+
+.loginCard {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.loginContent {
+    display: flex;
+    min-height: 400px;
+}
+
+.imageSection {
+    flex: 1;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 8px 0 0 8px;
+    border-right: 2px solid var(--primary-color);
+}
+
+.loginImage {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.formSection {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginTitle {
+    text-align: center;
+    color: var(--dark-text);
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formLabel {
+    margin-bottom: 4px;
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+.formInput {
+    padding: 8px 12px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.loginButton {
+    background: var(--primary-color);
+    color: var(--dark-text);
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.loginButton:hover {
+     background: #e6a800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .loginContent {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .imageSection {
+        padding: 20px;
+        min-height: 200px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .loginImage {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .formSection {
+        padding: 24px;
+    }
+
+    .loginCard {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loginTitle {
+        font-size: 20px;
+    }
+
+    .formInput {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .loginButton {
+        padding: 14px;
+        font-size: 16px;
+    }
+}

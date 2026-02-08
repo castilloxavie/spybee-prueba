@@ -1,0 +1,206 @@
+.subHeader {
+  background: var(--background-light);
+  border-bottom: 1px solid var(--light-gray);
+  padding: 20px 24px;
+  position: sticky;
+  top: 64px;
+  z-index: 100;
+}
+
+.subHeaderContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.counter {
+  background: var(--light-gray);
+  color: var(--dark-text);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.actionsSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.viewSelector {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.viewButton {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  color: var(--dark-text);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+.viewButton:hover {
+  background: var(--background-light);
+  color: var(--dark-text);
+  border-color: var(--medium-text);
+}
+
+.viewButton.active {
+  background: var(--light-gray);
+  color: var(--dark-text);
+  border-color: var(--light-gray);
+}
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  flex: 1;
+  max-width: 280px;
+}
+
+.searchInput {
+  padding: 8px 36px 8px 12px;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  background: var(--white);
+  color: var(--dark-text);
+  transition: all 0.2s ease;
+}
+
+.searchInput::placeholder {
+  color: var(--medium-text);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--medium-text);
+  pointer-events: none;
+  font-size: 14px;
+}
+
+.createButton {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.createButton:hover {
+  background: #FFB300;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+}
+
+.createButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .subHeaderContent {
+    gap: 16px;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .searchBar {
+    max-width: 200px;
+  }
+
+  .actionsSection {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subHeader {
+    padding: 16px 12px;
+  }
+
+  .subHeaderContent {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .actionsSection {
+    width: 100%;
+  }
+
+  .searchBar {
+    flex: 1;
+    max-width: none;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .viewButton {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .createButton {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
