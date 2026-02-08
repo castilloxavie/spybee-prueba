@@ -154,7 +154,7 @@ frontend-prueba/
 - **TypeScript 5**: JavaScript tipado para mayor robustez y DX
 
 ### Estilos y UI
-- **Tailwind CSS 4**: Framework CSS utilitario con PostCSS
+- **CSS**:  CSS 
 - **@tailwindcss/postcss**: Plugin para integración con PostCSS
 
 ### Mapeo y geolocalización
@@ -199,25 +199,5 @@ La aplicación consume datos estructurados que simulan una API RESTful. Cada pro
 - **Bundle analysis**: Recomendado analizar el tamaño del bundle para optimizaciones
 - **CDN**: Utilizar CDN para assets estáticos y mapas
 
-## Mejoras y consideraciones futuras
-
-### Funcionalidades adicionales
-- Implementación de API real con backend Node.js
-- Sistema de notificaciones en tiempo real
-- Exportación de datos (CSV, PDF)
-- Modo offline con Service Workers
-
-### Optimizaciones técnicas
-- Implementación de React Query para cacheo de datos
-- Migración completa a TypeScript en componentes
-- Testing con Jest y React Testing Library
-- Implementación de CI/CD con GitHub Actions
-
-### Escalabilidad
-- Arquitectura de micro-frontends para equipos grandes
-- Implementación de Storybook para desarrollo de componentes
-- Monitoreo con herramientas como Sentry
-
-Esta implementación demuestra un entendimiento profundo de las mejores prácticas en desarrollo frontend moderno, arquitectura escalable y integración de tecnologías avanzadas.
 
 
